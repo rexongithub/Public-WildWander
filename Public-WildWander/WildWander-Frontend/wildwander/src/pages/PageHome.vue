@@ -72,16 +72,10 @@ export default {
       // Filter by search query
       if (this.searchQuery) {
         const query = this.searchQuery.toLowerCase();
-        filtered = filtered.filter(spot =>
-          JSON.stringify(spot).toLowerCase().includes(query)
+        filtered = filtered.filter(spot => spot.title.toLowerCase().includes(query) || 
+          spot.location.toLowerCase().includes(query)
         );
       }
-
-      // Filter by type
-      if (this.filterType) {
-        filtered = filtered.filter(spot => spot.type === this.filterType);
-      }
-
       return filtered;
     },
     sortedSpots() {
