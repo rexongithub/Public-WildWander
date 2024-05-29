@@ -70,20 +70,30 @@
         </button>
         <h2 class="text-3xl font-bold mb-6">Register</h2>
         <form @submit.prevent="register">
-          <div class="mb-6">
+          <div class="mb-4">
             <label for="registerUsername" class="block mb-2">Username:</label>
             <input type="text" id="registerUsername" v-model="registerUsername"
-              class="w-full px-4 py-3 border rounded border-gray-300">
+              class="w-full px-4 py-2 border rounded border-gray-300">
           </div>
-          <div class="mb-6">
+          <div class="mb-4">
             <label for="registerEmail" class="block mb-2">Email:</label>
             <input type="email" id="registerEmail" v-model="registerEmail"
-              class="w-full px-4 py-3 border rounded border-gray-300">
+              class="w-full px-4 py-2 border rounded border-gray-300">
           </div>
-          <div class="mb-6">
+          <div class="mb-4">
+            <label for="registerFirstName" class="block mb-2">First Name:</label>
+            <input type="text" id="registerFirstName" v-model="registerFirstName"
+              class="w-full px-4 py-2 border rounded border-gray-300">
+          </div>
+          <div class="mb-4">
+            <label for="registerLastName" class="block mb-2">Last Name:</label>
+            <input type="text" id="registerLastName" v-model="registerLastName"
+              class="w-full px-4 py-2 border rounded border-gray-300">
+          </div>
+          <div class="mb-4">
             <label for="registerPassword" class="block mb-2">Password:</label>
             <input type="password" id="registerPassword" v-model="registerPassword"
-              class="w-full px-4 py-3 border rounded border-gray-300">
+              class="w-full px-4 py-2 border rounded border-gray-300">
           </div>
           <button type="submit" class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded">Register</button>
         </form>
@@ -155,8 +165,8 @@ export default {
       registerUsername: '',
       registerEmail: '',
       registerPassword: '',
-      registerFirstName: 'Firstname',
-      registerLastName: 'Lastname',
+      registerFirstName: '',
+      registerLastName: '',
       registerError: '',
     }
   },
